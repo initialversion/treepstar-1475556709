@@ -15,7 +15,7 @@
 
       <% @evaluations.each do |evaluation| %>
       <tr>
-        <td><%= evaluation.user_id %></td>
+        <td><%= evaluation.user.created_at %></td>
         <td>
           <a href="/evaluations/<%= evaluation.id %>" class="btn btn-primary">Show</a>
           <a href="/evaluations/<%= evaluation.id %>/edit" class="btn btn-warning">Edit</a>
