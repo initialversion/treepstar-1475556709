@@ -1,0 +1,28 @@
+<div class="page-header">
+  <h1>
+    Evaluations
+    <a href="/evaluations/new" class="btn btn-lg btn-success">New Evaluation</a>
+  </h1>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <table class="table table-striped table-hover">
+      <tr>
+        <th>User</th>
+        <th>Actions</th>
+      </tr>
+
+      <% @evaluations.each do |evaluation| %>
+      <tr>
+        <td><%= evaluation.user_id %></td>
+        <td>
+          <a href="/evaluations/<%= evaluation.id %>" class="btn btn-primary">Show</a>
+          <a href="/evaluations/<%= evaluation.id %>/edit" class="btn btn-warning">Edit</a>
+          <a href="/delete_evaluation/<%= evaluation.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
