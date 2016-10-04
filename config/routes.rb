@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root :to => "evaluations#index"
   # Routes for the Evaluation resource:
   # CREATE
   get "/evaluations/new", :controller => "evaluations", :action => "new"
